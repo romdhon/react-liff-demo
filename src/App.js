@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import './style.css';
-import LineChart from './Components/UIs/lineChart/LineChart';
-import Paper from '@material-ui/core/Paper';
 import { useStyles } from './AppConfig';
 import TableInfo from './Components/UIs/tableInfo/TableInfo';
 import Grid from '@material-ui/core/Grid';
@@ -42,7 +40,7 @@ export default function App() {
     liff.ready.then(() => {
       if (!liff.isLoggedIn()) {
         liff.login({
-          redirectUri: 'https://react-liff-demo.stackblitz.io'
+          redirectUri: 'https://lineliff-demo.web.app'
         });
       }
     });
@@ -64,7 +62,7 @@ export default function App() {
         .shareTargetPicker([
           {
             type: 'text',
-            text: 'https://react-liff-demo.stackblitz.io'
+            text: 'https://lineliff-demo.web.app'
           }
         ])
         .then(() => {
